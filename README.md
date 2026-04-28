@@ -1,4 +1,4 @@
-#  Floka Project
+#  Floka Studio
 A modern web application designed to provide a seamless and efficient user experience. This project focuses on simplicity, performance, and scalability using modern web technologies.
 
 ##  Live Demo
