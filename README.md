@@ -1,16 +1,37 @@
-# React + Vite
+#  Floka Project
+A modern web application designed to provide a seamless and efficient user experience. This project focuses on simplicity, performance, and scalability using modern web technologies.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+##  Live Demo
+🔗 https://floka-project.vercel.app
 
-Currently, two official plugins are available:
+## Features
+-  Fast and responsive UI
+-  Clean and modern design
+-  Fully responsive (Mobile + Desktop)
+-  Smooth navigation and user experience
+-  Deployed on Vercel for high performance
+-  
+## Tech Stack
+- Frontend: React / Next.js / Framer Motion
+- Styling: Tailwind CSS / CSS
+- Deployment: Vercel
+- Version Control: Git & GitHub
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+  
+##  Installation & Setup
 
-## React Compiler
+1. Clone the repository:
+git clone https://github.com/your-username/floka-project.git
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Navigate to the project folder:
+cd floka-project
 
-## Expanding the ESLint configuration
+Install dependencies:
+npm install
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Run the development server:
+npm run dev
+
+Open in browser:
+http://localhost:3000
+
