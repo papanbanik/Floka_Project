@@ -1,5 +1,5 @@
 import Hero_Card from '../assets/hero_card.jpg';
-import bgImage from '../assets/home-1-video.jpg';
+import bgImage from '../assets/home-1.jpg';
 import Navbar from './Navbar';
 export default function Hero() {
   return (
