@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <div className="relative min-h-screen overflow-hidden">
 
-      {/* BACKGROUND IMAGE */}
+     
       <img
         src={bgImage}
         className="absolute inset-0 w-full h-full object-cover"
