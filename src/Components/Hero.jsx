@@ -1,77 +1,94 @@
 import Hero_Card from '../assets/hero_card.jpg';
-import video from '../assets/home-1-video.mp4';
+import bgImage from '../assets/home-1-video.jpg';
+import Navbar from './Navbar';
 export default function Hero() {
   return (
-  
-    <div  className="relative min-h-screen items-center  overflow-hidden">
-      {/* Background Video */}
-     <video
-      autoPlay
-      loop
-      muted
-      playsInline
-      className='absolute inset-09 w-full h-full object-cover'>
-      <source 
-      src={video}
-      type='video/mp4'
+    <div className="relative min-h-screen overflow-hidden">
+
+      {/* BACKGROUND IMAGE */}
+      <img
+        src={bgImage}
+        className="absolute inset-0 w-full h-full object-cover"
+        alt="bg"
       />
-      </video>  
 
-    <div className='sm:mt-30 flex justify-center max-sm:flex-col '>
-      <div className="mt-20 relative z-10 w-full max-w-6xl px-5 ">
+      {/* DARK OVERLAY */}
+      <div className="absolute inset-0 bg-black/45 backdrop-blur-[2px]"></div>
 
-        <h1 className="ml-20 leading-20 max-sm:leading-15 text-9xl max-sm:text-6xl font-bold mb-10 text-white">
-          Floka <br />
-          <span className="text-gray-300 ml-30 text-7xl max-sm:text-5xl">
-            Studio
-          </span>
-        </h1>
-       </div>
-        {/* CARD */}
-        <div className="z-10 mr-30 flex items-center gap-6 bg-[#e9e9e9] rounded-3xl p-6 w-[700px] shadow-xl">
+      {/* CONTENT */}
+      <div className="relative z-10">
 
-          <div className="w-40 h-40   rounded-2xl overflow-hidden">
-            <img
-              src={Hero_Card}
-              alt="profile"
-              className="w-full h-full object-cover"
-            />
+        <Navbar />
+
+        <div className="flex flex-col items-center justify-center text-center min-h-screen px-6">
+
+          <div className='flex gap-5'>
+          <img src="https://rise-atseven.transforms.svdcdn.com/production/images/Placeholder-logos/global-search-awards.png?w=2000&q=80&fm=webp&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&dm=1750847622&s=590d094eb1537f802651cf997f550bbb" alt="hero-logo"
+              className='w-12 mb-2'/>
+           <img src="https://rise-atseven.transforms.svdcdn.com/production/images/Placeholder-logos/Mask-group.png?w=2000&q=80&fm=webp&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&dm=1750847620&s=e302afbd58f1be1cd9a3b75a2d8969fe" alt="hero-logo"
+              className='w-10 mb-2'/>
+            <img src="https://rise-atseven.transforms.svdcdn.com/production/images/Logos/Awards/White/UKSocial-Media-Awards-White.png?w=2000&q=80&fm=webp&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&dm=1750847605&s=8ab3593005a19fec2b91467ddd4869ea" alt="hero-logo"
+              className='w-18 mb-2'/>   
           </div>
-
-          <div className="flex flex-col flex-1">
-            <p className="text-gray-500 text-sm tracking-widest mb-2">
-              HEAD OF IDEA
+           <div className="mb-8">
+            <p className="text-white text-sm md:text-lg font-semibold uppercase tracking-wide">
+              #1 Most Recommended
             </p>
 
-            <h2 className="text-2xl font-semibold text-black mb-6">
-              Almond D. Nelsi
-            </h2>
+            <p className="text-white text-sm md:text-lg font-semibold uppercase">
+              Content Marketing Agency
+            </p>
 
-            <div className="flex items-center gap-4 group cursor-pointer">
-              <div className="w-12 h-12 flex items-center justify-center bg-black text-white rounded-full text-xl 
-                              group-hover:rotate-45 transition">
-                +
-              </div>
+            {/* MINI BRANDS */}
+            <div className="flex items-center gap-6 justify-center mt-5 flex-wrap opacity-80">
+              <span className="text-white text-xs md:text-sm">
+                GLOBAL SEARCH AWARDS
+              </span>
 
-              <p className="text-black font-medium tracking-wide">
-                LET’S TALK
-              </p>
+              <span className="text-white text-xs md:text-sm">
+                The Drum
+              </span>
+
+              <span className="text-white text-xs md:text-sm">
+                UK Social Media Awards
+              </span>
+
+              <span className="text-white text-xs md:text-sm">
+                Content Awards
+              </span>
             </div>
           </div>
-        </div>
-        
-      </div>
-      
-      <div  className='flex-col ml-5 sm:ml-185 mt-10 '>
-          <p>
-            No cookie-cutter websites. No fluff.
+
+          {/* BIG HEADING */}
+          <div className="leading-none">
+
+            <h1 className="text-white font-bold text-[70px] sm:text-[100px] md:text-[150px] lg:text-[120px]">
+              We Create
+            </h1>
+
+            {/* SECOND LINE */}
+            <div className="flex items-center justify-center gap-4 flex-wrap">
+
+              <h1 className="text-white font-bold text-[70px] sm:text-[100px] md:text-[150px] lg:text-[120px]">
+                Category
+              </h1>
+
+             
+
+              <h1 className="text-white font-bold text-[70px] sm:text-[100px] md:text-[150px] lg:text-[120px]">
+                Leaders
+              </h1>
+
+            </div>
+          </div>
+
+          {/* BOTTOM TEXT */}
+          <p className="text-white/90 mt-8 text-xl md:text-4xl font-medium">
+            on every searchable platform
           </p>
-          <p className='text-gray-500'>Just real tools and smart strategies to grow your <br/> business and elevate your brand.
-         </p>
-       </div>
 
-
+        </div>
+      </div>
     </div>
-     
   );
 }

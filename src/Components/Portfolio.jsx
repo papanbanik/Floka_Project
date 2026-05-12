@@ -8,25 +8,6 @@ import Happy_USER from '../assets/happy-user.PNG';
 const Portfolio = () => {
   return (
    <div id="portfolio" >
-    <div className="mt-10 text-lg pl-5">PORTFOLIO</div>
-
-    <div>
-      <div className="flex-1 mt-12 justify-end ">
-        <motion.h1
-          initial={{ opacity: 0, x: "100%" }}
-          whileInView={{ opacity: 1, x: "50%" }}
-          transition={{ duration: 3, ease: "easeOut" }}
-          viewport={{ once: true }}
-          className="pt-20 font-semibold text-4xl leading-snug text-black"
-        >
-          Strategy to build powerful<br/> digital solutions.
-
-        </motion.h1>
-      </div>
-
-    </div>
-    
-
     <div className="flex sm:flex-row gap-4 mt-10  ">
       
       {/* Card 1 */}

@@ -1,112 +1,102 @@
-import React from "react";
-import Contact1 from '../assets/contact.jpg'
-const Contact = () => {
-  const imageUrl = "https://source.unsplash.com/600x400/?furniture";
+import React from 'react';
 
-  const socialIcons = [
+const Contact = () => {
+  const footerLinks = [
     {
-      href: "https://facebook.com",
-      src: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg",
-      alt: "Facebook",
+      title: "Services",
+      links: ["Work", "About", "Culture", "Meet The Risers"],
     },
     {
-      href: "https://twitter.com",
-      src: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/twitter.svg",
-      alt: "Twitter",
+      title: "Testimonials",
+      links: ["Blog & Resources", "Webinars", "Careers"],
     },
     {
-      href: "https://linkedin.com",
-      src: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg",
-      alt: "LinkedIn",
-    },
-    {
-      href: "https://behance.net",
-      src: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/behance.svg",
-      alt: "Behance",
+      title: "Sheffield",
+      links: ["Manchester", "London", "New York", "Contact"],
     },
   ];
 
-  return (
-    <div id="contact" className="bg-black text-white px-6 md:px-16 py-16">
-      <div className="grid md:grid-cols-3 gap-10 items-start">
-        
-        {/* LEFT IMAGE */}
-        <div className="relative">
-          <img
-            src={Contact1}
-            alt="Floka"
-            className="rounded-2xl w-full object-cover"
-          />
+  const socialIcons = ['f', '𝕏', 'in', 'yt', 'tk', 'ig'];
 
-          {/* Overlay Logo Block */}
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="bg-white w-40 h-40 md:w-52 md:h-52 flex items-center justify-center text-black text-6xl font-bold rounded-md">
-              F
+  return (
+    <footer className="bg-[#0f0f0f] text-white pt-16 pb-8 px-8 font-sans">
+      <div className="max-w-7xl mx-auto">
+        {/* Top Section */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-20">
+          
+          {/* Newsletter Column */}
+          <div className="lg:col-span-5">
+            <h3 className="text-2xl font-semibold mb-6 tracking-tight">Stay updated with Rise news</h3>
+            <div className="relative max-w-md">
+              <input
+                type="email"
+                placeholder="Your Email Address"
+                className="w-full bg-[#222] rounded-full py-4 px-6 text-gray-300 focus:outline-none border border-transparent focus:border-gray-600"
+              />
+              <button className="absolute right-2 top-2 bottom-2 bg-[#b2f2e1] text-black rounded-full px-4 flex items-center justify-center hover:bg-white transition-colors">
+                <span className="text-lg font-bold">↗</span>
+              </button>
+            </div>
+            
+            {/* Social Icons */}
+            <div className="flex gap-2 mt-8">
+              {socialIcons.map((icon, idx) => (
+                <div key={idx} className="w-10 h-6 bg-white rounded-full flex items-center justify-center cursor-pointer hover:bg-[#b2f2e1] transition-colors">
+                  <span className="text-black text-xs font-bold">{icon} ↗</span>
+                </div>
+              ))}
             </div>
           </div>
 
-          {/* Envato Badge */}
-          <div className="absolute bottom-4 left-4 bg-zinc-900 text-white px-4 py-2 rounded-full text-sm flex items-center gap-2 shadow-lg">
-            <span>Buy on</span>
-            <span className="text-green-400 font-semibold">envato</span>
-          </div>
-        </div>
-
-        {/* CENTER MENU */}
-        <div className="flex flex-col gap-6 text-3xl md:text-4xl font-light">
-          <a href="#" className="hover:opacity-70">About Us</a>
-          <a href="#" className="hover:opacity-70">Journal</a>
-          <a href="#" className="hover:opacity-70">Faq</a>
-          <a href="#" className="hover:opacity-70">Get In Touch</a>
-          <a href="#" className="hover:opacity-70 blur-sm hover:blur-0 transition">
-            Careers
-          </a>
-        </div>
-
-        {/* RIGHT INFO */}
-        <div className="space-y-6 text-zinc-300">
-          <p className="leading-relaxed max-w-sm">
-            At Floka, we believe furniture should be more than just
-            functional—it should tell your story. With a focus on timeless
-            design, sustainable materials, and expert craftsmanship, we create
-            pieces that feel personal.
-          </p>
-
-          <div className="space-y-2 text-white">
-            <p>info@floka-design.com</p>
-            <p>+123 (456 789 00)</p>
-            <p className="text-zinc-400">12/A, Booston Tower, NYC</p>
-          </div>
-
-          {/* SOCIALS */}
-          <div className="flex gap-4 pt-4">
-            {socialIcons.map((icon, i) => (
-              <a
-                key={i}
-                href={icon.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 flex items-center justify-center border border-zinc-700 rounded-full hover:bg-white hover:text-black transition"
-              >
-                <img
-                  src={icon.src}
-                  alt={icon.alt}
-                  className="w-5 h-5 invert"
-                />
-              </a>
+          {/* Links Columns */}
+          <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-3 gap-8">
+            {footerLinks.map((section, idx) => (
+              <div key={idx} className={idx !== 0 ? "border-l border-gray-800 pl-8" : ""}>
+                <h4 className="text-xl font-bold mb-4">{section.title}</h4>
+                <ul className="space-y-3">
+                  {section.links.map((link) => (
+                    <li key={link}>
+                      <a href={`#${link}`} className="text-xl font-bold hover:text-[#b2f2e1] transition-colors">
+                        {link}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             ))}
           </div>
         </div>
+
+        {/* Giant Logo Branding Section */}
+        <div className="border-t border-gray-900 pt-10 mb-10">
+            {/* 
+               Reference to image_fbe425.png: 
+               Replace the text below with <img src="image_fbe425.png" alt="Rise at Seven Logo" /> 
+            */}
+          <h1 className="text-[12vw] font-bold leading-none tracking-tighter uppercase flex items-center justify-between">
+            Rise at Seven <span className="text-4xl border-2 border-white rounded-full w-16 h-16 flex items-center justify-center">®</span>
+          </h1>
+        </div>
+
+        {/* Legal Bottom Bar */}
+        <div className="flex flex-col md:flex-row justify-between items-center text-[10px] text-gray-500 gap-4 uppercase tracking-widest">
+          <div className="flex flex-wrap gap-x-4 gap-y-2 justify-center md:justify-start">
+            <span>© 2025 Rise at Seven Ltd. All rights reserved</span>
+            <span className="hidden md:inline">•</span>
+            <span>Company Number 11955187</span>
+            <span className="hidden md:inline">•</span>
+            <span>VAT Registered GB 322402945</span>
+            <span className="hidden md:inline">•</span>
+            <a href="#" className="hover:text-white">Privacy Policy</a>
+            <span className="hidden md:inline">•</span>
+            <a href="#" className="hover:text-white">Terms & conditions</a>
+          </div>
+          <div>
+            Website MadeByShape
+          </div>
+        </div>
       </div>
-
-      {/* BIG BACKGROUND TEXT */}
-      <div className="mt-16 text-[80px] md:text-[140px] font-bold text-white/5 select-none leading-none">
-        Floka
-      </div>   
-    </div>
-
-
-
+    </footer>
   );
 };
 
