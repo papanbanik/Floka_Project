@@ -21,10 +21,7 @@ const Contact = () => {
   return (
     <footer className="bg-[#0f0f0f] text-white pt-16 pb-8 px-8 font-sans">
       <div className="max-w-7xl mx-auto">
-        {/* Top Section */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-20">
-          
-          {/* Newsletter Column */}
           <div className="lg:col-span-5">
             <h3 className="text-2xl font-semibold mb-6 tracking-tight">Stay updated with Rise news</h3>
             <div className="relative max-w-md">
@@ -38,7 +35,6 @@ const Contact = () => {
               </button>
             </div>
             
-            {/* Social Icons */}
             <div className="flex gap-2 mt-8">
               {socialIcons.map((icon, idx) => (
                 <div key={idx} className="w-10 h-6 bg-white rounded-full flex items-center justify-center cursor-pointer hover:bg-[#b2f2e1] transition-colors">
@@ -48,7 +44,6 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Links Columns */}
           <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-3 gap-8">
             {footerLinks.map((section, idx) => (
               <div key={idx} className={idx !== 0 ? "border-l border-gray-800 pl-8" : ""}>
@@ -67,18 +62,12 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* Giant Logo Branding Section */}
         <div className="border-t border-gray-900 pt-10 mb-10">
-            {/* 
-               Reference to image_fbe425.png: 
-               Replace the text below with <img src="image_fbe425.png" alt="Rise at Seven Logo" /> 
-            */}
           <h1 className="text-[12vw] font-bold leading-none tracking-tighter uppercase flex items-center justify-between">
             Rise at Seven <span className="text-4xl border-2 border-white rounded-full w-16 h-16 flex items-center justify-center">®</span>
           </h1>
         </div>
 
-        {/* Legal Bottom Bar */}
         <div className="flex flex-col md:flex-row justify-between items-center text-[10px] text-gray-500 gap-4 uppercase tracking-widest">
           <div className="flex flex-wrap gap-x-4 gap-y-2 justify-center md:justify-start">
             <span>© 2025 Rise at Seven Ltd. All rights reserved</span>

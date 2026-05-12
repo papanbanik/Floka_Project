@@ -10,7 +10,6 @@ const Portfolio = () => {
    <div id="portfolio" >
     <div className="flex sm:flex-row gap-4 mt-10  ">
       
-      {/* Card 1 */}
       <div className="w-full sm:w-1/2 ">
         <a href="https://floka.casethemes.net/portfolio/web3-crypto/" target="_blank" rel="noopener noreferrer">
           <img
@@ -21,7 +20,6 @@ const Portfolio = () => {
         </a>
       </div>
 
-      {/* Card 2 */}
       <div className="w-full sm:w-1/2">
         <a href="https://floka.casethemes.net/wp-content/uploads/2025/05/home-1-icon7.svg" target="_blank" rel="noopener noreferrer">
           <img
